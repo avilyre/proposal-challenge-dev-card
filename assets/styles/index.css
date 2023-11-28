@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue500: #3B82F6;
+  --blue950: #172554;
+  --slate300: #CBD5E1;
+  --slate400: #94A3B8;
+  --slate800: #1E293B;
+  --slate900: #0F172A;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  color: var(--slate300);
+  font-family: Archivo, sans-serif;
+  background: var(--blue500);
+}
+
+.card-container {
+  display: flex;
+
+  min-height: 627px;
+  width: min(100%, 1327px);
+
+  border-radius: 1.875rem;
+
+  background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%, #1E293B 100%);
+
+  box-shadow: 0px 58px 75.4px -46px #172554;
+}
+
+.card-content-wrapper {
+  display: flex;
+  gap: 16.5rem;
+  flex: 1;
+
+  padding: 4.75rem 4.20rem;
+
+  background-image: url("../images/wave.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+/* Profile */
+.card-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+
+.card-profile .card-avatar {
+  height: calc(167px - 16px);
+  width: calc(167px - 16px);
+  border-radius: 999px;
+  border: solid 8px var(--slate800);
+}
+
+.card-profile .card-profile-info .card-fullName {
+  color: var(--slate300, var(--slate300));
+  font-family: Archivo;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+
+  margin-bottom: 0.63rem;
+}
+
+.card-profile .card-profile-info .card-role {
+  color: var(--slate400, var(--slate400));
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 2.4rem */
+
+  margin-bottom: 2.44rem;
+}
+
+.card-profile .card-profile-info .card-media-list {
+  list-style: none;
+}
+
+.card-profile .card-profile-info .card-media-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.19rem;
+}
+
+.card-profile .card-media-list li + li {
+  margin-top: 0.88rem;
+}
+
+/* Skills */
+.card-skills {
+  flex: 1;
+}
+
+.card-skills p {
+  color: var(--slate300, var(--slate300));
+  font-size: 1.5rem;
+  line-height: 160%; /* 2.4rem */
+}
+
+.card-skills progress {
+  height: 28px;
+  width: 100%;
+
+  margin-bottom: 1.70rem;
+  border-radius: 999px;
+}
+
+.card-skills progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: var(--slate900);
+}
+.card-skills progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: var(--blue500);
+}
